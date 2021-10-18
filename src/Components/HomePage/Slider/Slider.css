@@ -1,0 +1,12 @@
+.carousel-caption {
+  width: 300px;
+  z-index: 10;
+  color: black;
+  text-align: center;
+  top: 40%;
+  left: 45%;
+  bottom: auto;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}

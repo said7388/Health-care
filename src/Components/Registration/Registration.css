@@ -1,0 +1,29 @@
+#login {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+    margin-top: 50px;
+  }
+  
+  .login .form-group {
+    margin-bottom: 17px;
+  }
+  
+  .login .btn {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  #inner-wrapper {
+    color: #1d1d1d;
+    font-size: 19px;
+    line-height: 1.7em;
+    font-weight: 300;
+    padding: 50px;
+    background: #fff;
+    margin-bottom: 100px;
+  }
+  .input-group-addon {
+    color: gray;
+    margin-right: 10px;
+  }
