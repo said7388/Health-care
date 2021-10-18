@@ -1,0 +1,19 @@
+.feature-card:hover {
+    background: #C7F2FF;
+}
+.feature-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.feature-text {
+  color: #676464;
+  font-size: 12px;
+}
+.feature-img {
+  padding: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f3fcff;
+}

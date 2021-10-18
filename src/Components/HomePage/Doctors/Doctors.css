@@ -1,0 +1,27 @@
+.doctor-name {
+  font-size: 22px;
+  font-weight: 500;
+}
+.doctor-roll {
+  font-size: 18px;
+  font-weight: 500;
+  color: #13C2DA;
+}
+.doctor-img {
+    height: 270px;
+  background-color: #e6f7fc;
+}
+.social-icon {
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 12px;
+}
+.social-icon-color:hover {
+    color: #43D5CB;
+}
+.doctor-footer {
+    background-color: #43D5CB;
+    font-size: 18px;
+    padding-bottom: 0;
+    font-weight: 500;
+}

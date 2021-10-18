@@ -1,21 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
+import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
-import './Login.css';
+import "./Login.css";
 
 const Login = () => {
-  const { SignInWithGoogle, setIsLoading } = useAuth();
+  const { SignInWithGoogle, setIsLoading, logInWithPassword } = useAuth();
   const location = useLocation();
   const history = useHistory();
   const redirect_uri = location.state?.from || "/home";
 
   const handleGoogleLogin = () => {
-    SignInWithGoogle().then((result) => {
-      history.push(redirect_uri);
-    })
-    .finally(() => {
-      setIsLoading(false);
-  })
+    SignInWithGoogle()
+      .then((result) => {
+        history.push(redirect_uri);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleLogIn = (e) => {
+    logInWithPassword(email, password);
+    e.preventDefault();
   };
   return (
     <div>
@@ -30,6 +45,7 @@ const Login = () => {
                 <form>
                   <div className='form-floating mb-3'>
                     <input
+                    onBlur={handleEmailChange}
                       type='email'
                       className='form-control'
                       id='floatingInput'
@@ -39,6 +55,7 @@ const Login = () => {
                   </div>
                   <div className='form-floating mb-3'>
                     <input
+                    onBlur={handlePasswordChange}
                       type='password'
                       className='form-control'
                       id='floatingPassword'
@@ -62,6 +79,7 @@ const Login = () => {
                   </div>
                   <div className='d-grid'>
                     <button
+                    onClick={handleLogIn}
                       className='btn btn-success btn-login text-uppercase fw-bold'
                       type='submit'>
                       Sign in
@@ -69,6 +87,9 @@ const Login = () => {
                   </div>
                 </form>
                 <hr className='my-4' />
+                <p className='regular-subtitle text-center'>
+                  Connect With Social Media
+                </p>
                 <div className='d-grid mb-2'>
                   <button
                     onClick={handleGoogleLogin}
@@ -85,6 +106,10 @@ const Login = () => {
                     Facebook
                   </button>
                 </div>
+                <p className='regular-text mt-3'>
+                  Don't have an account?
+                  <Link to='/signup'> Registration here.</Link>
+                </p>
               </div>
             </div>
           </div>

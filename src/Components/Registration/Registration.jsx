@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import useAuth from "../../Hooks/useAuth";
+import UseFirebase from "../../Hooks/useFirebase";
 import "./Registration.css";
 
 const Registration = () => {
-  const {SignInWithGoogle, user} = useAuth();
+  const { SignInWithGoogle, user } = useAuth();
+  const {signUpWithPassword} = UseFirebase();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
+  const handlePasswordChange = e => {
+      setPassword(e.target.value);
+  }
+  const handleEmailChange = e => {
+      setEmail(e.target.value);
+  }
+
+  const handleSignUp = (e) => {
+    signUpWithPassword(email, password);
+    e.preventDefault();
+  }
   return (
     <div className='col-md-4 col-md-offset-4 mx-auto' id='login'>
       <section id='inner-wrapper' className='login mx-auto shadow rounded-3'>
@@ -33,6 +48,7 @@ const Registration = () => {
                 </span>
                 <input
                   type='email'
+                  onBlur={handleEmailChange}
                   className='form-control'
                   placeholder='Email Address'
                 />
@@ -44,6 +60,7 @@ const Registration = () => {
                   <i className='fa fa-key'> </i>
                 </span>
                 <input
+                  onBlur={handlePasswordChange}
                   type='password'
                   className='form-control'
                   placeholder='Password'
@@ -56,6 +73,7 @@ const Registration = () => {
                   <i className='fa fa-key'> </i>
                 </span>
                 <input
+                onBlur={handlePasswordChange}
                   type='password'
                   className='form-control'
                   placeholder='Confirm Password'
@@ -64,6 +82,7 @@ const Registration = () => {
             </div>
             <div className='d-grid'>
               <button
+              onClick={handleSignUp}
                 className='btn btn-success btn-login text-uppercase fw-bold'
                 type='submit'>
                 Sign Up

@@ -1,0 +1,56 @@
+[
+  {
+    "info": "a room or building with scientific equipment for doing scientific tests or for teaching science, or a place where chemicals or medicines are produced: research laboratories. a computer laboratory.",
+    "ID": "1",
+    "title": "Labratory",
+    "img": "https://www.linkpicture.com/q/service-single-image-1.jpg"
+  },
+  {
+    "info": "Dental care is the maintenance of healthy teeth and may refer to: Oral hygiene, the practice of keeping the mouth and teeth clean in order to prevent dental disorders. Dentistry, the professional care of teeth, including professional oral hygiene and dental surgery.",
+    "ID": "2",
+    "title": "Dental Care",
+    "img": "https://www.linkpicture.com/q/service-single-image-2.jpg"
+  },
+  {
+    "info": "Ophthalmology is a branch of medicine and surgery that deals with the diagnosis and treatment of disorders of the eye. An ophthalmologist is a physician who specializes in ophthalmology. ... Ophthalmologists may participate in academic research on the diagnosis and treatment for eye disorders.",
+    "ID": "4",
+    "title": "Ophthalmology",
+    "img": "https://www.linkpicture.com/q/service-single-image-3.jpg"
+  },
+  {
+    "info": "Pulmonary hypertension is high blood pressure in the blood vessels that supply the lungs (pulmonary arteries). It's a serious condition that can damage the right side of the heart. The walls of the pulmonary arteries become thick and stiff, and cannot expand as well to allow blood through.",
+    "ID": "5",
+    "title": "Pulmonary",
+    "img": "https://www.linkpicture.com/q/service-single-image-4.jpg"
+  },
+  {
+    "info": "A pediatrician is a medical doctor who manages the physical, behavioral, and mental care for children from birth until age 18. A pediatrician is trained to diagnose and treat a broad range of childhood illnesses, from minor health problems to serious diseases",
+    "ID": "6",
+    "title": "Pediatrics",
+    "img": "https://www.linkpicture.com/q/service-single-image-5.jpg"
+  },
+  {
+    "info": "The main product sold in most pharmacies is drugs and various pharmaceutical products. These products are split up into groups that require a prescription, which are handled by the pharmacists, and groups that do not require a prescription, such as over-the-counter drugs, and can be purchased by whoever wants them.",
+    "ID": "7",
+    "title": "Drug Store",
+    "img": "https://www.linkpicture.com/q/service-single-image-6.jpg"
+  },
+  {
+    "info": "A CT scan, or computed tomography scan, sends radiation through the body. However, unlike a simple X-ray study, it offers a much higher level of detail, creating computerized, 360-degree views of the body's structures. CT scans are fast and detailed.",
+    "ID": "8",
+    "title": "X-ray & CT Scan",
+    "img": "https://www.linkpicture.com/q/service-single-image-7.jpg"
+  },
+  {
+    "info": "Cardiology is the study and treatment of disorders of the heart and the blood vessels. A person with heart disease or cardiovascular disease may be referred to a cardiologist. Cardiology is a branch of internal medicine. ... A cardiologist specializes in diagnosing and treating diseases of the cardiovascular system.",
+    "ID": "9",
+    "title": "Cardiology",
+    "img": "https://www.linkpicture.com/q/service-single-image-8.jpg"
+  },
+  {
+    "info": "Neurology is the branch of medicine concerned with the study and treatment of disorders of the nervous system. The nervous system is a complex, sophisticated system that regulates and coordinates body activities. It has two major divisions: Central nervous system: the brain and spinal cord.",
+    "ID": "10",
+    "title": "Neurology",
+    "img": "https://www.linkpicture.com/q/service-single-image-9.jpg"
+  }
+]

@@ -2,13 +2,13 @@ import React from "react";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
-import './Header.css';
+import "./Header.css";
 
 const Header = () => {
   const { user, LogOut } = useAuth();
   return (
-    <div className='header shadow'>
-      <Navbar collapseOnSelect expand='lg' variant='light'>
+    <div className='header sticky-top shadow-lg'>
+      <Navbar className='' collapseOnSelect expand='lg' variant='light'>
         <Container>
           <Navbar.Brand as={Link} to='/'>
             <img src='https://www.linkpicture.com/q/Meddical.svg' alt='' />
@@ -22,7 +22,7 @@ const Header = () => {
               <Nav.Link as={Link} to='/'>
                 Blogs
               </Nav.Link>
-              <Nav.Link as={Link} to='/'>
+              <Nav.Link as={Link} to='/service'>
                 Service Area
               </Nav.Link>
               <Nav.Link as={Link} to='/pricing'>
@@ -31,7 +31,7 @@ const Header = () => {
               <Nav.Link as={Link} to='/'>
                 About Us
               </Nav.Link>
-              
+
               {!user.email ? (
                 <Nav.Link as={Link} to='/login'>
                   <Button className='btn-regular'>Sign in</Button>
@@ -44,7 +44,11 @@ const Header = () => {
                       className='profile-img'
                       src={user.photoURL}
                       alt='user pic'
-                      onError="this.onError=null; this.src='https://www.linkpicture.com/q/41-410093_circled-user-icon-user-profile-icon-png.png'"
+                      onError={(e) => {
+                        e.target.onerror = false;
+                        e.target.src =
+                          "https://www.linkpicture.com/q/download_86.png";
+                      }}
                     />
                   }
                   id='basic-nav-dropdown'>
@@ -54,10 +58,19 @@ const Header = () => {
                         src={user.photoURL}
                         alt=''
                         className='profile-info-img'
+                        onError={(e) => {
+                          e.target.onerror = false;
+                          e.target.src =
+                            "https://www.linkpicture.com/q/download_86.png";
+                        }}
                       />
-                      <p className='regular-subtitle mt-2'>
-                        {user.displayName.toUpperCase()}
-                      </p>
+                      {user.displayName ? (
+                        <p className='regular-subtitle mt-2'>
+                          {user.displayName}
+                        </p>
+                      ) : (
+                        <p className='regular-subtitle mt-2'>Unknown User</p>
+                      )}
                       <button className='btn btn-regular py-1 px-2 rounded-pill '>
                         <i class='fas fa-user-circle'></i> View Profile
                       </button>
