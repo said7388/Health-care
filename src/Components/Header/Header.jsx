@@ -6,6 +6,7 @@ import "./Header.css";
 
 const Header = () => {
   const { user, LogOut } = useAuth();
+
   return (
     <div className='header sticky-top shadow-lg'>
       <Navbar className='' collapseOnSelect expand='lg' variant='light'>
@@ -16,19 +17,19 @@ const Header = () => {
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse className='bg-navbar' id='responsive-navbar-nav'>
             <Nav className='mx-auto nav-bar'>
-              <Nav.Link as={Link} to='/'>
+              <Nav.Link as={Link} to='/doctor'>
                 Doctors
               </Nav.Link>
-              <Nav.Link as={Link} to='/'>
+              <Nav.Link as={Link} to='/blog'>
                 Blogs
               </Nav.Link>
               <Nav.Link as={Link} to='/service'>
                 Service Area
               </Nav.Link>
-              <Nav.Link as={Link} to='/pricing'>
+              <Nav.Link as={Link} to='/contact'>
                 Contact Us
               </Nav.Link>
-              <Nav.Link as={Link} to='/'>
+              <Nav.Link as={Link} to='/about'>
                 About Us
               </Nav.Link>
 
@@ -72,19 +73,19 @@ const Header = () => {
                         <p className='regular-subtitle mt-2'>Unknown User</p>
                       )}
                       <button className='btn btn-regular py-1 px-2 rounded-pill '>
-                        <i class='fas fa-user-circle'></i> View Profile
+                        <i className='far fa-user-circle'></i> View Profile
                       </button>
                     </div>
                     <hr />
                     <div className='profile-info-body'>
                       <p>
                         <Link to='/'>
-                          <i class='far fa-bookmark'></i> Bookmarks
+                          <i className='fas fa-bookmark'></i> Bookmarks
                         </Link>
                       </p>
                       <p>
                         <Link to='/' onClick={LogOut}>
-                          <i class='fas fa-sign-out-alt'></i> Logout
+                          <i className='fas fa-sign-out-alt'></i> Logout
                         </Link>
                       </p>
                     </div>

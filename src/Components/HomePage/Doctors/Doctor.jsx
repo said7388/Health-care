@@ -14,10 +14,10 @@ function Doctor({ doctor }) {
           <p className='doctor-name'>{doctor.name}</p>
           <p className='doctor-roll'>{doctor.roll}</p>
           <p className='social-icon'>
-            <i class='fab social-icon-color fa-facebook-square'></i>
-            <i class='fab social-icon-color fa-twitter-square'></i>
-            <i class='fab social-icon-color fa-instagram'></i>
-            <i class='fab social-icon-color fa-linkedin'></i>
+            <i className='fab social-icon-color fa-facebook-square'></i>
+            <i className='fab social-icon-color fa-twitter-square'></i>
+            <i className='fab social-icon-color fa-instagram'></i>
+            <i className='fab social-icon-color fa-linkedin'></i>
           </p>
         </Card.Body>
         <Card.Footer className='doctor-footer'>

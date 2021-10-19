@@ -1,0 +1,24 @@
+.contact-card {
+    background-color: #F3FCFF;
+    color: #1F2B6C;
+    text-align: left;
+}
+.contact-card:hover {
+    background-color: aquamarine;
+}
+.img-contact-card {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+}
+.contact-sub {
+    color: #159EEC;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.card {
+    width: 500px;
+    max-width: 100%;
+  }
+  

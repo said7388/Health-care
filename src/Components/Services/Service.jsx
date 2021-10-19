@@ -1,7 +1,7 @@
 import React from "react";
-import "./Services.css";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./Services.css";
 
 function Service({ service }) {
   return (
@@ -15,7 +15,7 @@ function Service({ service }) {
           </Card.Text>
           <p className='service-link'>
             <Link to='/'>
-              View Details <i class='fas fa-angle-right'></i>
+              View Details <i className='fas fa-angle-right'></i>
             </Link>
           </p>
         </Card.Body>

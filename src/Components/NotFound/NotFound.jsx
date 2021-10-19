@@ -9,7 +9,7 @@ const NotFound = () => {
       <h1 className='text-danger'>Your Page Is Not Found</h1>
       <img
         className='NotFound'
-        src='https://www.linkpicture.com/q/404_3.jpg'
+        src='https://www.linkpicture.com/q/3804949.jpg'
         alt=''
       />
       <div>
