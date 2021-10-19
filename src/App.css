@@ -8,32 +8,45 @@
 
 /* Css for regular Button */
 .btn-regular {
+  border: 0;
+  padding: 7px 15px;
+  transition: 0.4s;
+  border-radius: 4px;
   color: #fff;
   background-color: #13c5dd;
-  border-color: #13c5dd;
 }
-.btn-regular:hover {
-  color: #13c5dd;
-  background-color: #f2f8fb;
-  border-color: #13c5dd;
-  font-weight: 500;
-}
-.btn-check:focus + .btn-regular,
+.btn-regular:hover,
 .btn-regular:focus {
-  color: #fff;
-  background-color: #13c5db;
-  border-color: #13c5dd;
-  box-shadow: 0 0 0 0.25rem rgba(60, 127, 153, 0.5);
+  color: #000;
+  background-color: #00e1ff;
+  box-shadow: 0 0 0 0.1rem rgba(60, 127, 153, 0.5);
 }
 .regular-subtitle {
   font-size: 16px;
   font-weight: 500;
 }
+
 .regular-title {
+  text-align: center;
   font-size: 32px;
   font-weight: 600;
   text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
 }
+.regular-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #3fbbc0;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+
 .regular-text {
   font-size: 16px;
   font-weight: 400;

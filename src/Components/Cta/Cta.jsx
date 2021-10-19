@@ -5,9 +5,9 @@ import "./Cta.css";
 function Cta() {
   return (
     <div>
-      <section id='cta' class='cta'>
-        <div class='container' data-aos='zoom-in'>
-          <div class='text-center'>
+      <section id='cta' className='cta'>
+        <div className='container' data-aos='zoom-in'>
+          <div className='text-center'>
             <h3>In an emergency? Need help now?</h3>
             <p>
               {" "}
@@ -16,7 +16,7 @@ function Cta() {
               the requested records directly to the Qualified Doctors day before
               or on the appointment day.
             </p>
-            <Link class='cta-btn scrollto' to='#appointment'>
+            <Link className='cta-btn scrollto' to='#appointment'>
               Make an Appointment
             </Link>
           </div>

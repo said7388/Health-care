@@ -65,7 +65,7 @@ function Footer() {
               Website <span className='number'> medical.com</span>
             </p>
             <p className='footer-direction mx-4'>
-              Get Map Direction <i class='fas fa-long-arrow-alt-right'></i>
+              Get Map Direction <i className='fas fa-long-arrow-alt-right'></i>
             </p>
           </Col>
         </Row>

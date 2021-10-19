@@ -11,6 +11,7 @@ import Services from './Components/Services/Services';
 import Footer from './Components/Footer/Footer';
 import Contract from './Components/Contract/Contract';
 import AboutUs from './Components/AboutUs/AboutUs';
+import Doctors from './Components/HomePage/Doctors/Doctors';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route exact path="/about">
               <AboutUs />
+            </Route>
+            <Route exact path="/doctor">
+              <Doctors></Doctors>
             </Route>
             <Route exact path="/signup">
               <Registration></Registration>

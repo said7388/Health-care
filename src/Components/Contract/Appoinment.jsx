@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, Col, Row } from "react-bootstrap";
 
 function Appoinment() {
   return (
@@ -7,59 +8,56 @@ function Appoinment() {
         <div className='text-center text-uppercase'>
           <h3>Make An Appointment</h3>
         </div>
-        <div className='card-body'>
-          <form>
-            <div className='form-group py-2'>
-              <label className='mb-0'>
-                Your name <span className='text-danger'>*</span>
-              </label>
-              <input
-                name='name'
-                type='text'
-                className='form-control p-3'
-                placeholder='Name'
+        <Row className='g-2 g-md-3 mt-md-4 mt-3'>
+          <Col sm={12} md={3}>
+            <Card className='p-3 shadow contact-card'>
+              <img
+                src='https://www.linkpicture.com/q/Group-188_1.png'
+                alt=''
+                className='img-contact-card mx-auto'
               />
-            </div>
-            <div className='form-group py-2'>
-              <label className='mb-0'>
-                Your email<span className='text-danger'>*</span>
-              </label>
-              <input
-                name='email'
-                type='email'
-                className='form-control p-3'
-                placeholder='Email'
+              <p className='regular-subtitle'>Emergency</p>
+              <p className='regular-text'>(237) 666-331-894</p>
+              <p className='regular-text'>(237) 681-812-255</p>
+            </Card>
+          </Col>
+          <Col sm={12} md={3}>
+            <Card className='p-3 shadow contact-card'>
+              <img
+                src='https://www.linkpicture.com/q/Group-178.png'
+                alt=''
+                className='img-contact-card mx-auto'
               />
-            </div>
-            <div className='form-group py-2'>
-              <label className='mb-0'>Your contact number (Optional)</label>
-              <input
-                name='contact'
-                type='text'
-                className='form-control p-3'
-                placeholder='Contact'
+              <p className='regular-subtitle'>Location</p>
+              <p className='regular-text'>0123 New York</p>
+              <p className='regular-text'>United States</p>
+            </Card>
+          </Col>
+          <Col sm={12} md={3}>
+            <Card className='p-3 shadow contact-card'>
+              <img
+                src='https://www.linkpicture.com/q/Group-202.png'
+                alt=''
+                className='img-contact-card mx-auto'
               />
-            </div>
-            <div className='form-group py-2'>
-              <label className='mb-0'>
-                Message<span className='text-danger'>*</span>
-              </label>
-              <textarea
-                name='message'
-                type='text'
-                className='form-control '
-                placeholder='Message'
+              <p className='regular-subtitle'>Email</p>
+              <p className='regular-text'>fildineeesoe@gmil.com</p>
+              <p className='regular-text'>myebstudios@gmail.com</p>
+            </Card>
+          </Col>
+          <Col sm={12} md={3}>
+            <Card className='p-3 shadow contact-card'>
+              <img
+                src='https://www.linkpicture.com/q/Group-177.png'
+                alt=''
+                className='img-contact-card mx-auto'
               />
-            </div>
-            <p className='text-center mb-0 py-2'>
-              <input
-                type='submit'
-                className='btn btn-regular btn-lg w-50 text-uppercase'
-                value='Send Now'
-              />
-            </p>
-          </form>
-        </div>
+              <p className='regular-subtitle'>Working Hours</p>
+              <p className='regular-text'>Mon-Sat 09:00-20:00</p>
+              <p className='regular-text'>Sunday Emergency only</p>
+            </Card>
+          </Col>
+        </Row>
       </div>
     </div>
   );
