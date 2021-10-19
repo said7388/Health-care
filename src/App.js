@@ -12,6 +12,7 @@ import Footer from './Components/Footer/Footer';
 import Contract from './Components/Contract/Contract';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Doctors from './Components/HomePage/Doctors/Doctors';
+import Galarry from './Components/HomePage/Galarry/Galarry';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route exact path="/about">
               <AboutUs />
+            </Route>
+            <Route exact path="/galary">
+              <Galarry />
             </Route>
             <Route exact path="/doctor">
               <Doctors></Doctors>

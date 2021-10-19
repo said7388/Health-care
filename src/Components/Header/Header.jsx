@@ -20,8 +20,8 @@ const Header = () => {
               <Nav.Link as={Link} to='/doctor'>
                 Doctors
               </Nav.Link>
-              <Nav.Link as={Link} to='/blog'>
-                Blogs
+              <Nav.Link as={Link} to='/galary'>
+                Gallary
               </Nav.Link>
               <Nav.Link as={Link} to='/service'>
                 Service Area
