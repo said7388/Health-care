@@ -14,7 +14,7 @@ function Service({ service }) {
             <p className='service-text'>{service.info}</p>
           </Card.Text>
           <p className='service-link'>
-            <Link to='/'>
+            <Link to={`/service/${service.ID}`}>
               View Details <i className='fas fa-angle-right'></i>
             </Link>
           </p>

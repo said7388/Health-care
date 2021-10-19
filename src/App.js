@@ -15,8 +15,11 @@ import Doctors from './Components/HomePage/Doctors/Doctors';
 import Galarry from './Components/HomePage/Galarry/Galarry';
 import Profile from './Components/Profile/Profile';
 import PrivateRoute from './Components/Login/PrivateRoute'
+import ServiceDetail from './Components/Services/ServiceDetail';
+import useService from './Hooks/useService';
 
 function App() {
+  const { services} = useService();
   return (
     <div className="App">
       <AuthProvider>
@@ -29,11 +32,11 @@ function App() {
             <Route exact path="/home">
               <Home></Home>
             </Route>
-            <Route path="/service">
+            <Route exact path="/service">
               <Services />
             </Route>
-            <Route path="/service:id">
-              <Services />
+            <Route path="/service/:id">
+              <ServiceDetail services={services} />
             </Route>
             <PrivateRoute path="/profile">
               <Profile />
