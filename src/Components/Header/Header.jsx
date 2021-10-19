@@ -72,9 +72,9 @@ const Header = () => {
                       ) : (
                         <p className='regular-subtitle mt-2'>Unknown User</p>
                       )}
-                      <button className='btn btn-regular py-1 px-2 rounded-pill '>
+                      <Link to='/profile'className='btn btn-regular py-1 px-2 rounded-pill '>
                         <i className='far fa-user-circle'></i> View Profile
-                      </button>
+                      </Link>
                     </div>
                     <hr />
                     <div className='profile-info-body'>

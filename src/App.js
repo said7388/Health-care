@@ -13,6 +13,8 @@ import Contract from './Components/Contract/Contract';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Doctors from './Components/HomePage/Doctors/Doctors';
 import Galarry from './Components/HomePage/Galarry/Galarry';
+import Profile from './Components/Profile/Profile';
+import PrivateRoute from './Components/Login/PrivateRoute'
 
 function App() {
   return (
@@ -30,9 +32,12 @@ function App() {
             <Route path="/service">
               <Services />
             </Route>
-            <Route path="/service:single">
+            <Route path="/service:id">
               <Services />
             </Route>
+            <PrivateRoute path="/profile">
+              <Profile />
+            </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>
             </Route>
