@@ -6,7 +6,6 @@
     -webkit-box-orient: vertical;
   }
 .news-title {
-    text-align: left;
     overflow: hidden;
     text-overflow: hidden;
     display: -webkit-box;

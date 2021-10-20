@@ -1,13 +1,9 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
-import useDoctor from "../../Hooks/useDoctor";
-import Cta from "../Cta/Cta";
-import Doctor from "../HomePage/Doctors/Doctor";
+import Doctors from "../HomePage/Doctors/Doctors";
 import FeatureCard from "../HomePage/FeatureCard/FeatureCard";
 import "./AboutUs.css";
 
 function AboutUs() {
-  const { doctors } = useDoctor();
   return (
     <div className='mt-md-5 mt-3'>
       <section id='about' className='about'>
@@ -38,9 +34,9 @@ function AboutUs() {
               </p>
               <ul>
                 <li>
-                  <i className='far fa-check-circle'></i> We will fax the requested
-                  records directly to the Qualified Doctors day before or on the
-                  appointment day.
+                  <i className='far fa-check-circle'></i> We will fax the
+                  requested records directly to the Qualified Doctors day before
+                  or on the appointment day.
                 </li>
                 <li>
                   <i className='far fa-check-circle'></i> Once the family has
@@ -48,8 +44,8 @@ function AboutUs() {
                   final arrangements can begin.
                 </li>
                 <li>
-                  <i className='far fa-check-circle'></i> Emergency staff who are
-                  available 24 hours a day, seven days a week. These staff
+                  <i className='far fa-check-circle'></i> Emergency staff who
+                  are available 24 hours a day, seven days a week. These staff
                   members are trained professionals
                 </li>
                 <li>
@@ -63,15 +59,7 @@ function AboutUs() {
         </div>
       </section>
       <FeatureCard />
-      <Container className='my-3 my-md-5'>
-        <p className='regular-title'>Meet Our Doctors</p>
-        <Row className='g-2 g-md-4'>
-          {doctors.slice(0, 4).map((doctor) => (
-            <Doctor key={doctor.ID} doctor={doctor}></Doctor>
-          ))}
-        </Row>
-      </Container>
-      <Cta></Cta>
+      <Doctors quantity={4} />
     </div>
   );
 }

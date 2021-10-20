@@ -6,7 +6,7 @@ import Welcome from "../HomePage/Welcome/Welcome";
 import Service from "./Service";
 import "./Services.css";
 
-function Services() {
+const Services =({quant}) =>{
   const { services } = useService();
   return (
     <div className='my-md-5 my-3 text-center'>
@@ -15,7 +15,7 @@ function Services() {
         <FeatureCard />
         <p className='regular-title'>Our Medical Services</p>
         <Row className='g-2 g-md-3'>
-          {services.map((service) => (
+          {services.slice(0, quant).map((service) => (
             <Service service={service} key={service.ID} />
           ))}
         </Row>

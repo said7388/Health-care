@@ -1,15 +1,17 @@
 import React from "react";
 import "./News.css";
 import { Card, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 function SingleNews({ single }) {
-  const { author, published } = single;
+  let { author, published, image } = single;
   const date = published.substring(0, 10);
+  if (image === "None") {
+    image = "https://www.linkpicture.com/q/no-thumbnail.png";
+  }
   return (
     <Col sm={12} md={4}>
       <Card className='h-100'>
-        <Card.Img variant='top' className='news-img' src={single.image} />
+        <Card.Img variant='top' className='news-img' src={image} />
         <Card.Body>
           <Card.Title className='news-title'>
             <a href={single.url}>{single.title}</a>

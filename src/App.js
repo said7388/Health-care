@@ -17,6 +17,7 @@ import Profile from './Components/Profile/Profile';
 import PrivateRoute from './Components/Login/PrivateRoute'
 import ServiceDetail from './Components/Services/ServiceDetail';
 import useService from './Hooks/useService';
+import News from './Components/HomePage/News/News';
 
 function App() {
   const { services} = useService();
@@ -33,7 +34,7 @@ function App() {
               <Home></Home>
             </Route>
             <Route exact path="/service">
-              <Services />
+              <Services quant={9} />
             </Route>
             <Route path="/service/:id">
               <ServiceDetail services={services} />
@@ -51,13 +52,16 @@ function App() {
               <Galarry />
             </Route>
             <Route exact path="/doctor">
-              <Doctors></Doctors>
+              <Doctors quantity={8}></Doctors>
             </Route>
             <Route exact path="/signup">
               <Registration></Registration>
             </Route>
             <Route exact path="/contact">
               <Contract></Contract>
+            </Route>
+            <Route exact path="/news">
+              <News quantity={30}></News>
             </Route>
 
             <Route path="*">

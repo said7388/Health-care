@@ -20,11 +20,14 @@ const Header = () => {
               <Nav.Link as={Link} to='/doctor'>
                 Doctors
               </Nav.Link>
+              <Nav.Link as={Link} to='/news'>
+                Covid News
+              </Nav.Link>
               <Nav.Link as={Link} to='/galary'>
                 Gallary
               </Nav.Link>
               <Nav.Link as={Link} to='/service'>
-                Service Area
+                Services
               </Nav.Link>
               <Nav.Link as={Link} to='/contact'>
                 Contact Us

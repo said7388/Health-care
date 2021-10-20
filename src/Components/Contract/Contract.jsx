@@ -2,7 +2,6 @@ import React from "react";
 import Welcome from "../HomePage/Welcome/Welcome";
 import "./Contract.css";
 
-
 function Contract() {
   return (
     <div className='mt-md-5 my-3'>
@@ -23,11 +22,11 @@ function Contract() {
 
         <div>
           <iframe
+            title='Meddical'
             className='medi-map'
-            title='maps'
-            src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621'
-            frameborder='0'
-            allowfullscreen></iframe>
+            src='https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12099.578392794248!2d-73.99760377578289!3d40.698318937624514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sA108%20Adam%20Street%2C%20New%20York%2C%20NY%20535022!5e0!3m2!1sbn!2sbd!4v1634729385323!5m2!1sbn!2sbd'
+            allowfullscreen=''
+            loading='lazy'></iframe>
         </div>
 
         <div className='container'>
