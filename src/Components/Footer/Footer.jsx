@@ -15,7 +15,9 @@ function Footer() {
               fax the requested records directly to the qualified doctors the
               day before or the day of the appointment.
             </p>
-            <button className='btn btn-regular px-3'>Get Service</button>
+            <Link to='/service'>
+              <button className='btn btn-regular px-3'>Get Service</button>
+            </Link>
           </Col>
           <Col sm={12} md={3}>
             <p className='footer-title'>Departments</p>

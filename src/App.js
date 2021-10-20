@@ -20,7 +20,7 @@ import useService from './Hooks/useService';
 import News from './Components/HomePage/News/News';
 
 function App() {
-  const { services} = useService();
+  const { services } = useService();
   return (
     <div className="App">
       <AuthProvider>
@@ -39,6 +39,7 @@ function App() {
             <Route path="/service/:id">
               <ServiceDetail services={services} />
             </Route>
+            {/* Private router for view profile */}
             <PrivateRoute path="/profile">
               <Profile />
             </PrivateRoute>
@@ -63,7 +64,7 @@ function App() {
             <Route exact path="/news">
               <News quantity={30}></News>
             </Route>
-
+            {/* Not found Route */}
             <Route path="*">
               <NotFound />
             </Route>

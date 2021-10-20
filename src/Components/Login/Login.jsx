@@ -16,11 +16,16 @@ const Login = () => {
     setEmail(e.target.value);
   };
   // import data from useAuth, useLocation and useHistory.
-  const { SignInWithGoogle, setIsLoading, logInWithPassword } = useAuth();
+  const {
+    SignInWithGoogle,
+    setIsLoading,
+    logInWithPassword,
+    SignInWithFacebook,
+  } = useAuth();
   const location = useLocation();
   const history = useHistory();
   const redirect_uri = location.state?.from || "/home";
-  
+
   // handle Google Login Function
   const handleGoogleLogin = () => {
     SignInWithGoogle()
@@ -31,10 +36,19 @@ const Login = () => {
         setIsLoading(false);
       });
   };
+  // handle Google Login Function
+  const handleFacebookLogin = () => {
+    SignInWithFacebook()
+      .then((result) => {
+        history.push(redirect_uri);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
   // Handle Email and Password Login
   const handleLogIn = (e) => {
-    logInWithPassword(email, password)
-    .then((userCredential) => {
+    logInWithPassword(email, password).then((userCredential) => {
       history.push(redirect_uri);
     });
     e.preventDefault();
@@ -58,6 +72,7 @@ const Login = () => {
                       className='form-control'
                       id='floatingInput'
                       placeholder='name@example.com'
+                      required
                     />
                     <label htmlFor='floatingInput'>Email address</label>
                   </div>
@@ -68,6 +83,7 @@ const Login = () => {
                       className='form-control'
                       id='floatingPassword'
                       placeholder='Password'
+                      required
                     />
                     <label htmlFor='floatingPassword'>Password</label>
                   </div>
@@ -108,6 +124,7 @@ const Login = () => {
                 </div>
                 <div className='d-grid'>
                   <button
+                    onClick={handleFacebookLogin}
                     className='btn btn-facebook btn-login text-uppercase fw-bold'
                     type='submit'>
                     <i className='fab fa-facebook-f me-2'></i> Sign in with

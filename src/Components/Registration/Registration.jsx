@@ -6,7 +6,7 @@ import "./Registration.css";
 
 const Registration = () => {
   // import user and function here
-  const { SignInWithGoogle, user, setIsLoading } = useAuth();
+  const { SignInWithGoogle, user, setIsLoading, updateName } = useAuth();
   const { signUpWithPassword } = UseFirebase();
   const location = useLocation();
   const history = useHistory();
@@ -14,11 +14,15 @@ const Registration = () => {
 
   // Crete Email and password state for update data
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
-  // Get Email and password function
+  // Get Email and password and name function
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+  };
+  const handleNameChange = (e) => {
+    setName(e.target.value);
   };
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -38,6 +42,7 @@ const Registration = () => {
   // Sign up function here
   const handleSignUp = (e) => {
     signUpWithPassword(email, password).then((userCredential) => {
+      updateName(name);
       history.push(redirect_uri);
     });
     e.preventDefault();
@@ -59,9 +64,11 @@ const Registration = () => {
                   <i className='fa fa-user'> </i>
                 </span>
                 <input
+                onBlur={handleNameChange}
                   type='text'
                   className='form-control'
                   placeholder='Name'
+                  required
                 />
               </div>
             </div>
@@ -75,6 +82,7 @@ const Registration = () => {
                   onBlur={handleEmailChange}
                   className='form-control'
                   placeholder='Email Address'
+                  required
                 />
               </div>
             </div>
@@ -88,6 +96,7 @@ const Registration = () => {
                   type='password'
                   className='form-control'
                   placeholder='Password'
+                  required
                 />
               </div>
             </div>
@@ -101,6 +110,7 @@ const Registration = () => {
                   type='password'
                   className='form-control'
                   placeholder='Confirm Password'
+                  required
                 />
               </div>
             </div>

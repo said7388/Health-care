@@ -1,5 +1,5 @@
 import {
-    getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword
+    getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, FacebookAuthProvider
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Firebase/Firebase.init";
@@ -15,12 +15,18 @@ const UseFirebase = () => {
 
     // Create GoogleAuthProvider and auth 
     const GoogleProvider = new GoogleAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
     const auth = getAuth();
 
     // create SignInWithGoogle function
     const SignInWithGoogle = () => {
         setIsLoading(true);
         return signInWithPopup(auth, GoogleProvider)
+    };
+    // create SignInWith facebook function
+    const SignInWithFacebook = () => {
+        setIsLoading(true);
+        return signInWithPopup(auth, facebookProvider)
     };
 
     // Create signIn With Email And Password function
@@ -29,6 +35,14 @@ const UseFirebase = () => {
 
     };
 
+    //  update user name
+    const updateName = (name) => {
+        updateProfile(auth.currentUser, {
+            displayName: name
+        }).then(() => {
+            // Profile updated!
+        })
+    }
     // create login with password and email function
     const logInWithPassword = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
@@ -67,7 +81,9 @@ const UseFirebase = () => {
         user,
         signUpWithPassword,
         logInWithPassword,
-        LogOut
+        updateName,
+        LogOut,
+        SignInWithFacebook
     };
 };
 

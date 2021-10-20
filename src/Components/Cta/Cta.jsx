@@ -16,7 +16,7 @@ function Cta() {
               the requested records directly to the Qualified Doctors day before
               or on the appointment day.
             </p>
-            <Link className='cta-btn scrollto' to='#appointment'>
+            <Link className='cta-btn scrollto' to='/contact'>
               Make an Appointment
             </Link>
           </div>

@@ -68,14 +68,13 @@ const Header = () => {
                             "https://www.linkpicture.com/q/download_86.png";
                         }}
                       />
-                      {user.displayName ? (
-                        <p className='regular-subtitle mt-2'>
-                          {user.displayName}
-                        </p>
-                      ) : (
-                        <p className='regular-subtitle mt-2'>Unknown User</p>
-                      )}
-                      <Link to='/profile'className='btn btn-regular py-1 px-2 rounded-pill '>
+
+                      <p className='regular-subtitle mt-2'>
+                        {user.displayName}
+                      </p>
+                      <Link
+                        to='/profile'
+                        className='btn btn-regular py-1 px-2 rounded-pill '>
                         <i className='far fa-user-circle'></i> View Profile
                       </Link>
                     </div>
