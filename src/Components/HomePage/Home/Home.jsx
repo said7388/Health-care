@@ -5,6 +5,7 @@ import Doctor from "../Doctors/Doctor";
 import FeatureCard from "../FeatureCard/FeatureCard";
 import Galarry from "../Galarry/Galarry";
 import HomeServises from "../HomeServises/HomeServises";
+import News from "../News/News";
 import Slider from "../Slider/Slider";
 import Welcome from "../Welcome/Welcome";
 
@@ -25,6 +26,7 @@ function Home() {
           ))}
         </Row>
       </Container>
+      <News></News>
     </div>
   );
 }

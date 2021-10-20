@@ -1,25 +1,49 @@
 import React, { useState } from "react";
+import { useHistory, useLocation } from "react-router";
 import useAuth from "../../Hooks/useAuth";
 import UseFirebase from "../../Hooks/useFirebase";
 import "./Registration.css";
 
 const Registration = () => {
-  const { SignInWithGoogle, user } = useAuth();
-  const {signUpWithPassword} = UseFirebase();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // import user and function here
+  const { SignInWithGoogle, user, setIsLoading } = useAuth();
+  const { signUpWithPassword } = UseFirebase();
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/home";
 
-  const handlePasswordChange = e => {
-      setPassword(e.target.value);
-  }
-  const handleEmailChange = e => {
-      setEmail(e.target.value);
-  }
+  // Crete Email and password state for update data
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  // Get Email and password function
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  // handle Google Login Function
+  const handleGoogleSignIn = () => {
+    SignInWithGoogle()
+      .then((result) => {
+        history.push(redirect_uri);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+  
+  // Sign up function here
   const handleSignUp = (e) => {
-    signUpWithPassword(email, password);
+    signUpWithPassword(email, password).then((userCredential) => {
+      history.push(redirect_uri);
+    });
     e.preventDefault();
-  }
+  };
+
+  // Return jsx code here
   return (
     <div className='col-md-4 col-md-offset-4 mx-auto' id='login'>
       <section id='inner-wrapper' className='login mx-auto shadow rounded-3'>
@@ -73,7 +97,7 @@ const Registration = () => {
                   <i className='fa fa-key'> </i>
                 </span>
                 <input
-                onBlur={handlePasswordChange}
+                  onBlur={handlePasswordChange}
                   type='password'
                   className='form-control'
                   placeholder='Confirm Password'
@@ -82,7 +106,7 @@ const Registration = () => {
             </div>
             <div className='d-grid'>
               <button
-              onClick={handleSignUp}
+                onClick={handleSignUp}
                 className='btn btn-success btn-login text-uppercase fw-bold'
                 type='submit'>
                 Sign Up
@@ -92,7 +116,7 @@ const Registration = () => {
           <hr className='my-4' />
           <div className='d-grid mb-2'>
             <button
-              onClick={SignInWithGoogle}
+              onClick={handleGoogleSignIn}
               className='btn btn-google btn-login text-uppercase fw-bold'
               type='submit'>
               <i className='fab fa-google me-2'></i> Sign up with Google

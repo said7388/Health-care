@@ -5,11 +5,23 @@ import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 
 const Login = () => {
+  // Create State for update email and password
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  // Function for get password and email
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  // import data from useAuth, useLocation and useHistory.
   const { SignInWithGoogle, setIsLoading, logInWithPassword } = useAuth();
   const location = useLocation();
   const history = useHistory();
   const redirect_uri = location.state?.from || "/home";
-
+  
+  // handle Google Login Function
   const handleGoogleLogin = () => {
     SignInWithGoogle()
       .then((result) => {
@@ -19,19 +31,15 @@ const Login = () => {
         setIsLoading(false);
       });
   };
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
+  // Handle Email and Password Login
   const handleLogIn = (e) => {
-    logInWithPassword(email, password);
+    logInWithPassword(email, password)
+    .then((userCredential) => {
+      history.push(redirect_uri);
+    });
     e.preventDefault();
   };
+  // return jsx here
   return (
     <div>
       <div className='container'>
@@ -45,7 +53,7 @@ const Login = () => {
                 <form>
                   <div className='form-floating mb-3'>
                     <input
-                    onBlur={handleEmailChange}
+                      onBlur={handleEmailChange}
                       type='email'
                       className='form-control'
                       id='floatingInput'
@@ -55,7 +63,7 @@ const Login = () => {
                   </div>
                   <div className='form-floating mb-3'>
                     <input
-                    onBlur={handlePasswordChange}
+                      onBlur={handlePasswordChange}
                       type='password'
                       className='form-control'
                       id='floatingPassword'
@@ -79,7 +87,7 @@ const Login = () => {
                   </div>
                   <div className='d-grid'>
                     <button
-                    onClick={handleLogIn}
+                      onClick={handleLogIn}
                       className='btn btn-success btn-login text-uppercase fw-bold'
                       type='submit'>
                       Sign in

@@ -4,12 +4,8 @@ import { Card, Col } from "react-bootstrap";
 function Doctor({ doctor }) {
   return (
     <Col sm={12} md={3}>
-      <Card style={{ width: '17rem' }} className='shadow doctor-card'>
-        <Card.Img
-          className='doctor-img'
-          variant='top'
-          src={doctor.img}
-        />
+      <Card style={{ width: "17rem" }} className='shadow doctor-card'>
+        <Card.Img className='doctor-img' variant='top' src={doctor.img} />
         <Card.Body>
           <p className='doctor-name'>{doctor.name}</p>
           <p className='doctor-roll'>{doctor.roll}</p>
@@ -20,9 +16,6 @@ function Doctor({ doctor }) {
             <i className='fab social-icon-color fa-linkedin'></i>
           </p>
         </Card.Body>
-        <Card.Footer className='doctor-footer'>
-          <p>View Profile</p>
-        </Card.Footer>
       </Card>
     </Col>
   );
