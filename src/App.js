@@ -16,11 +16,10 @@ import Galarry from './Components/HomePage/Galarry/Galarry';
 import Profile from './Components/Profile/Profile';
 import PrivateRoute from './Components/Login/PrivateRoute'
 import ServiceDetail from './Components/Services/ServiceDetail';
-import useService from './Hooks/useService';
 import News from './Components/HomePage/News/News';
 
 function App() {
-  const { services } = useService();
+
   return (
     <div className="App">
       <AuthProvider>
@@ -36,9 +35,9 @@ function App() {
             <Route exact path="/service">
               <Services quant={9} />
             </Route>
-            <Route path="/service/:id">
-              <ServiceDetail services={services} />
-            </Route>
+            <PrivateRoute path="/service/:id">
+              <ServiceDetail />
+            </PrivateRoute>
             {/* Private router for view profile */}
             <PrivateRoute path="/profile">
               <Profile />
@@ -58,9 +57,9 @@ function App() {
             <Route exact path="/signup">
               <Registration></Registration>
             </Route>
-            <Route exact path="/contact">
+            <PrivateRoute exact path="/contact">
               <Contract></Contract>
-            </Route>
+            </PrivateRoute>
             <Route exact path="/news">
               <News quantity={30}></News>
             </Route>
