@@ -57,9 +57,9 @@ function App() {
             <Route exact path="/signup">
               <Registration></Registration>
             </Route>
-            <PrivateRoute exact path="/contact">
+            <Route exact path="/contact">
               <Contract></Contract>
-            </PrivateRoute>
+            </Route>
             <Route exact path="/news">
               <News quantity={30}></News>
             </Route>

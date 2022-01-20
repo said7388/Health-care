@@ -36,7 +36,7 @@ function Contract() {
                 <div className='col-md-12'>
                   <div className='info-box'>
                     <i className='fas fa-map-marker-alt'></i>
-                    <h3 classNam='info-box-title'>Our Address</h3>
+                    <h3 className='info-box-title'>Our Address</h3>
                     <p>A108 Adam Street, New York, NY 535022</p>
                   </div>
                 </div>

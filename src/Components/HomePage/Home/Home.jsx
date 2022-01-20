@@ -5,14 +5,14 @@ import FeatureCard from "../FeatureCard/FeatureCard";
 import Galarry from "../Galarry/Galarry";
 import News from "../News/News";
 import Slider from "../Slider/Slider";
-import Welcome from "../Welcome/Welcome";
+import Suppliment from "../Suppliment/Suppliment";
 
 function Home() {
   return (
     <div>
       <Slider />
       <FeatureCard />
-      <Welcome />
+      <Suppliment />
       <Galarry />
       <Services quant={6} />
       <Doctors quantity={4} />

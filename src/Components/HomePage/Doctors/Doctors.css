@@ -5,17 +5,36 @@
 .doctor-roll {
   font-size: 18px;
   font-weight: 500;
-  color: #13C2DA;
+  color: #13c2da;
 }
 .doctor-img {
-    height: 270px;
+  height: 270px;
   background-color: #e6f7fc;
 }
 .social-icon {
-    text-align: center;
-    font-size: 35px;
-    letter-spacing: 12px;
+  text-align: center;
+  font-size: 40px;
 }
-.social-icon-color:hover {
-    color: #43D5CB;
+.icon-s {
+  margin-right: 10px;
+  color: black;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 50%;
+}
+.twitter:hover {
+  background-color: #36cbfd;
+  color: white;
+}
+.facebook:hover {
+  background-color: #3c5a9b;
+  color: white;
+}
+.instagram:hover {
+  background-color: #c538a6;
+  color: white;
+}
+.linkedin:hover {
+  background-color: #1073af;
+  color: white;
 }

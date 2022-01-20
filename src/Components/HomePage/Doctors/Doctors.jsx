@@ -11,7 +11,7 @@ const Doctors = ({quantity}) => {
     <div className='mt-md-5 mt-3 text-center'>
       <Container className='mb-3 mb-md-5'>
         <p className='regular-title'>Meet Our Doctors</p>
-        <Row className='g-2 g-md-4'>
+        <Row className='g-2 g-md-2'>
           {doctors.slice(0, quantity).map((doctor) => (
             <Doctor key={doctor.ID} doctor={doctor}></Doctor>
           ))}
