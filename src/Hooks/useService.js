@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 const useService = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch("./service.json")
+        fetch("https://meddical.herokuapp.com/services")
             .then((res) => res.json())
             .then((data) => setServices(data));
     }, []);
 
-    return {services};
+    return { services };
 }
 
 export default useService;

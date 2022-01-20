@@ -21,11 +21,10 @@ function SingleNews({ single }) {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <p className='source'>
-            {" "}
-            <small className='source-name'>{author}</small>{" "}
-            <small>{date}</small>{" "}
-          </p>
+          <div className='source'>
+            <small className='source-name'>{author}</small>
+            <small>{date}</small>
+          </div>
         </Card.Footer>
       </Card>
     </Col>

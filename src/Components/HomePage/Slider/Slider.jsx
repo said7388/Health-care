@@ -5,35 +5,45 @@ import "./Slider.css";
 function Slider() {
   return (
     <div>
-      <Carousel className="text-left">
-        <Carousel.Item >
+      <Carousel className='text-left slider-main'>
+        <Carousel.Item>
           <img
-            className='d-block w-100'
+            className='slider-img'
             src='https://www.linkpicture.com/q/h1-slider-image-42.jpg'
             alt='First slide'
           />
           <Carousel.Caption>
             <h3 className='slider-title'>An Advanced Medicine Practice</h3>
-            <p className='slider-text'>This is open to everyone every day and provides primary health care and cutting-edge medicine in a central location.</p>
-            <button className="btn btn-regular">BOOK APPOINTMENT</button>
+            <p className='slider-text'>
+              This is open to everyone every day and provides primary health
+              care and cutting-edge medicine in a central location.
+            </p>
+            <button className='btn btn-regular btn-slider'>
+              BOOK APPOINTMENT
+            </button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className='d-block w-100'
+            className='slider-img'
             src='https://www.linkpicture.com/q/h1-slider-image-32.jpg'
             alt='Second slide'
           />
 
           <Carousel.Caption>
             <h3 className='slider-title'>We have the finest physicians</h3>
-            <p className='slider-text'>Our integrated friendly health system is on a relentless pursuit of better care in the world</p>
-            <button className="btn btn-regular">BOOK APPOINTMENT</button>
+            <p className='slider-text'>
+              Our integrated friendly health system is on a relentless pursuit
+              of better care in the world
+            </p>
+            <button className='btn btn-regular btn-slider'>
+              BOOK APPOINTMENT
+            </button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className='d-block w-100'
+            className='slider-img'
             src='https://www.linkpicture.com/q/h1-slider-image-22.jpg'
             alt='Third slide'
           />
@@ -41,9 +51,12 @@ function Slider() {
           <Carousel.Caption>
             <h3 className='slider-title'>Dedication and Commitment</h3>
             <p className='slider-text'>
-            We have made the most advanced, customer friendly medical services in the world.
+              We have made the most advanced, customer friendly medical services
+              in the world.
             </p>
-            <button className="btn btn-regular">BOOK APPOINTMENT</button>
+            <button className='btn btn-regular btn-slider'>
+              BOOK APPOINTMENT
+            </button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

@@ -15,12 +15,12 @@ function Doctor({ doctor }) {
         <Card.Body>
           <p className='doctor-name'>{doctor.name}</p>
           <p className='doctor-roll'>{doctor.roll}</p>
-          <p className='social-icon'>
+          <div className='social-icon'>
             <FaFacebookF className='icon-s facebook' />
             <FaTwitter className='icon-s twitter' />
             <FaInstagram className='icon-s instagram' />
             <FaLinkedinIn className='icon-s linkedin' />
-          </p>
+          </div>
         </Card.Body>
       </Card>
     </Col>

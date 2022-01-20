@@ -8,11 +8,43 @@
   right: auto;
   bottom: auto;
 }
+.slider-img {
+  display: block;
+  width: 100%;
+}
 .slider-title {
- font-size: 50px;
- color: #22343d;
+  font-size: 50px;
+  color: #22343d;
 }
 .slider-text {
   font-size: 18px;
   color: #3d4549;
+}
+
+@media screen and (max-width: 668px) {
+  .carousel-caption {
+    width: 55%;
+    z-index: 10;
+    color: black;
+    text-align: left;
+    top: 10%;
+    left: 5%;
+    right: auto;
+    bottom: auto;
+  }
+  .slider-title {
+    font-size: 22px;
+  }
+  .slider-text {
+    font-size: 14px;
+  }
+  .slider-img {
+    height: 300px;
+    display: block;
+    width: 100%;
+  }
+  .btn-slider {
+    padding: 3px 7px;
+    font-size: 12px;
+  }
 }

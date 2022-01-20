@@ -16,7 +16,7 @@ const Services =({quant}) =>{
         <p className='regular-title'>Our Medical Services</p>
         <Row className='g-2 g-md-3'>
           {services.slice(0, quant).map((service) => (
-            <Service service={service} key={service.ID} />
+            <Service service={service} key={service._id} />
           ))}
         </Row>
       </Container>

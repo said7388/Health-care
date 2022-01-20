@@ -6,7 +6,7 @@ function FeatureCard() {
   return (
     <div className='my-md-5 my-3 text-center'>
       <Container>
-        <Row>
+        <Row className='g-2 g-md-4'>
           <Col sm={12} md={3}>
             <Card className='p-2 p-md-4 shadow feature-ca'>
               <div className='text-center'>
